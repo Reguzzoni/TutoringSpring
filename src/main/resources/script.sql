@@ -4,8 +4,8 @@
 
 CREATE TABLE IF NOT EXISTS public.ruolo
 (
-    ruoli character varying(50) COLLATE public."default" NOT NULL,
-    ruolo character varying(50) COLLATE public."default" NOT NULL
+    id character varying(50),
+    descrizione_Ruolo character(50)
 )
 
 TABLESPACE pg_default;

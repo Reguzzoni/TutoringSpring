@@ -6,22 +6,19 @@ public class RuoloDto {
 	@JsonProperty("RuoloResponse")
 	
  
-	private String ruolo;
+	private String id;
 
 	private String descrizioneRuolo;
 	
-	@Override
-	public String toString() {
-		return String.format("Ruolo [ruolo=%s, descrizioneRuolo=%s]", getRuolo(), getDescrizioneRuolo());
-	}
-    
-	public String getRuolo() {
-		return ruolo;
+    public String getId() {
+		return id;
 	}
 
-	public void setRuolo(String ruolo) {
-		this.ruolo = ruolo;
+
+	public void setId(String id) {
+		this.id = id;
 	}
+
 
 	public String getDescrizioneRuolo() {
 		return descrizioneRuolo;

@@ -6,22 +6,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="RUOLI")
+@Table(name="RUOLO")
 public class RuoloEntity {
 
 	@Id
-    @Column(name="RUOLO")
-    private String ruolo;
+    @Column(name="ID")
+    private String id;
      
     @Column(name="DESCRIZIONE_RUOLO")
     private String descrizioneRuolo;
 
-	public String getRuolo() {
-		return ruolo;
+	public String getId() {
+		return id;
 	}
 
-	public void setRuolo(String ruolo) {
-		this.ruolo = ruolo;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getDescrizioneRuolo() {
@@ -31,10 +31,4 @@ public class RuoloEntity {
 	public void setDescrizioneRuolo(String descrizioneRuolo) {
 		this.descrizioneRuolo = descrizioneRuolo;
 	}
-     
-	@Override
-	public String toString() {
-		return String.format("RuoliEntity [ruolo=%s, descrizioneRuolo=%s]", ruolo, descrizioneRuolo);
-	}
-    
 }

@@ -29,7 +29,7 @@ public class RuoloServiceImpl implements RuoloService{
 				.map(entity -> {
 					RuoloDto dto = new RuoloDto();
 					dto.setDescrizioneRuolo(entity.getDescrizioneRuolo());
-					dto.setRuolo(entity.getRuolo());
+					dto.setId(entity.getId());
 					return dto;
 				})
 				.collect(Collectors.toList());
