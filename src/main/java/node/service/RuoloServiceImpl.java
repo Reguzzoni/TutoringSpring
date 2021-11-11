@@ -17,7 +17,14 @@ public class RuoloServiceImpl implements RuoloService{
 	public RuoliRepository ruoliRepository;
 	
 	public List<RuoloDto> getAllRuoli() {
+		
+		// JEE STYLE CON HIBERNATE E NAMEDQUERY
+		//em.createNamedQuery(Padrone.NAMED_QUERY_ALL, Padrone.class)
+		//.getResultList();
+		
+		// SPRING REPOSITORY
 		List<RuoloEntity> listRuoloEntity = ruoliRepository.findAll();
+		
 		return listRuoloEntity.stream()
 				.map(entity -> {
 					RuoloDto dto = new RuoloDto();
@@ -26,6 +33,10 @@ public class RuoloServiceImpl implements RuoloService{
 					return dto;
 				})
 				.collect(Collectors.toList());
+	}
+	
+	public void saveRuolo(RuoloEntity ruolo) {
+		ruoliRepository.save(ruolo);
 	}
 	
 }
