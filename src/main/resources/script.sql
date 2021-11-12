@@ -9,3 +9,11 @@ CREATE TABLE IF NOT EXISTS public.ruolo
 )
 
 TABLESPACE pg_default;
+
+
+CREATE TABLE IF NOT EXISTS public.pair
+(
+    pair_value character varying(50)
+)
+
+TABLESPACE pg_default;
