@@ -118,6 +118,16 @@ public class RuoloServiceImpl implements RuoloService{
 			}
 		).collect(Collectors.toList());
 		
+		// java7
+		/*
+		 * -- inizializza la variable entity
+		 * -- foreach di resultDTO (map)
+		 * creami un nuovo entity
+		 * riempimi il nuovo entity
+		 * -- assegna l'entita tramite listEntity.add() (map)
+		 * 
+		 */
+		
 		// salvare le entita!
 		pairRepository.saveAll(entityResult);
 		return result;
